@@ -27,7 +27,7 @@ export default function HeroSection() {
           </div>
           <div className="relative">
             <Image
-              src="/placeholder.svg?height=600&width=500"
+              src="/abaya-1.png"
               alt="Fashion Model"
               width={500}
               height={600}
