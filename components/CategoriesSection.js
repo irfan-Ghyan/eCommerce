@@ -6,37 +6,37 @@ export default function CategoriesSection() {
     {
       name: "Abayas",
       href: "/category/abayas",
-      image: "/placeholder.svg?height=300&width=300",
+      image: "/abaya-1.png",
       description: "Elegant traditional wear",
     },
     {
       name: "Jewelry",
       href: "/category/jewelry",
-      image: "/placeholder.svg?height=300&width=300",
+      image: "/abaya-2.png",
       description: "Exquisite jewelry pieces",
     },
     {
       name: "Cosmetics",
       href: "/category/cosmetics",
-      image: "/placeholder.svg?height=300&width=300",
+      image: "/abaya-3.png",
       description: "Premium beauty products",
     },
     {
       name: "Perfumes",
       href: "/category/perfumes",
-      image: "/placeholder.svg?height=300&width=300",
+      image: "/abaya-4.png",
       description: "Captivating fragrances",
     },
     {
       name: "Shoes",
       href: "/category/shoes",
-      image: "/placeholder.svg?height=300&width=300",
+      image: "/abaya-5.png",
       description: "Stylish footwear",
     },
     {
       name: "Bags",
       href: "/category/bags",
-      image: "/placeholder.svg?height=300&width=300",
+      image: "/abaya-6.png",
       description: "Designer handbags",
     },
   ]

@@ -36,13 +36,13 @@ export default function CheckoutPage() {
       name: "Classic Black Abaya",
       price: 129.99,
       quantity: 1,
-      image: "/placeholder.svg?height=80&width=60",
+      image: "/abaya-1.png",
     },
     {
       name: "Gold Pearl Necklace",
       price: 89.99,
       quantity: 1,
-      image: "/placeholder.svg?height=80&width=60",
+      image: "/abaya-2.png",
     },
   ]
 

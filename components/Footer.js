@@ -5,10 +5,10 @@ export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-2xl font-bold text-rose-400 mb-4">Elegance</h3>
+            <h3 className="text-2xl font-bold text-rose-400 mb-4">BACHLAY</h3>
             <p className="text-gray-300 mb-4">
               Your premier destination for elegant ladies' fashion, jewelry, cosmetics, and accessories.
             </p>
@@ -47,7 +47,7 @@ export default function Footer() {
           </div>
 
           {/* Customer Service */}
-          <div>
+          {/* <div>
             <h4 className="font-semibold mb-4">Customer Service</h4>
             <ul className="space-y-2 text-gray-300">
               <li>
@@ -71,7 +71,7 @@ export default function Footer() {
                 </Link>
               </li>
             </ul>
-          </div>
+          </div> */}
 
           {/* Contact Info */}
           <div>
@@ -79,15 +79,15 @@ export default function Footer() {
             <div className="space-y-2 text-gray-300">
               <div className="flex items-center">
                 <Phone className="w-4 h-4 mr-2" />
-                <span>+1 (555) 123-4567</span>
+                <span>+971 (55) 9368028</span>
               </div>
               <div className="flex items-center">
                 <Mail className="w-4 h-4 mr-2" />
-                <span>info@elegance.com</span>
+                <span>info@bachlay.com</span>
               </div>
               <div className="flex items-center">
                 <MapPin className="w-4 h-4 mr-2" />
-                <span>123 Fashion St, Style City</span>
+                <span>123 Fashion St, Walkcity, Dubai</span>
               </div>
             </div>
           </div>
