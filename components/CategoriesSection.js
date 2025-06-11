@@ -12,31 +12,31 @@ export default function CategoriesSection() {
     {
       name: "Jewelry",
       href: "/category/jewelry",
-      image: "/abaya-2.png",
+      image: "/jew-1.png",
       description: "Exquisite jewelry pieces",
     },
     {
       name: "Cosmetics",
       href: "/category/cosmetics",
-      image: "/abaya-3.png",
+      image: "/cosmetics-1.png",
       description: "Premium beauty products",
     },
     {
       name: "Perfumes",
       href: "/category/perfumes",
-      image: "/abaya-4.png",
+      image: "/perfume-1",
       description: "Captivating fragrances",
     },
     {
       name: "Shoes",
       href: "/category/shoes",
-      image: "/abaya-5.png",
+      image: "/shoe-1.png",
       description: "Stylish footwear",
     },
     {
       name: "Bags",
       href: "/category/bags",
-      image: "/abaya-6.png",
+      image: "/bag-1.png",
       description: "Designer handbags",
     },
   ]

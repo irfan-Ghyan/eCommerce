@@ -14,10 +14,10 @@ const productData = {
       price: 129.99,
       originalPrice: 159.99,
       images: [
-        "/placeholder.svg?height=600&width=500",
-        "/placeholder.svg?height=600&width=500",
-        "/placeholder.svg?height=600&width=500",
-        "/placeholder.svg?height=600&width=500",
+        "/abaya-1.png",
+        "/abaya-2.png",
+        "/abaya-3.png",
+        "/abaya-4.png",
       ],
       rating: 4.8,
       reviews: 124,
@@ -60,7 +60,6 @@ export default function ProductPage({ params }) {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      {/* Breadcrumb */}
       <nav className="mb-8">
         <div className="flex items-center space-x-2 text-sm text-gray-600">
           <Link href="/" className="hover:text-rose-600">
@@ -76,7 +75,6 @@ export default function ProductPage({ params }) {
       </nav>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-        {/* Product Images */}
         <div>
           <div className="aspect-[4/5] mb-4 overflow-hidden rounded-lg">
             <Image
@@ -88,7 +86,6 @@ export default function ProductPage({ params }) {
             />
           </div>
 
-          {/* Thumbnail Images */}
           <div className="grid grid-cols-4 gap-2">
             {product.images.map((image, index) => (
               <button
@@ -110,7 +107,6 @@ export default function ProductPage({ params }) {
           </div>
         </div>
 
-        {/* Product Details */}
         <div>
           <div className="mb-4">
             <h1 className="text-3xl font-bold text-gray-900 mb-2">{product.name}</h1>
@@ -129,7 +125,6 @@ export default function ProductPage({ params }) {
             </div>
           </div>
 
-          {/* Price */}
           <div className="mb-6">
             <div className="flex items-center space-x-3">
               <span className="text-3xl font-bold text-rose-600">AED {product.price}</span>
@@ -144,7 +139,6 @@ export default function ProductPage({ params }) {
             </div>
           </div>
 
-          {/* Fabric */}
           {product.fabric && (
             <div className="mb-6">
               <h3 className="font-medium text-gray-900 mb-2">Fabric</h3>
@@ -152,7 +146,6 @@ export default function ProductPage({ params }) {
             </div>
           )}
 
-          {/* Color Selection */}
           <div className="mb-6">
             <h3 className="font-medium text-gray-900 mb-3">Color</h3>
             <div className="flex space-x-3">
@@ -170,8 +163,6 @@ export default function ProductPage({ params }) {
             </div>
             <p className="text-sm text-gray-600 mt-2">Selected: {product.colors[selectedColor].name}</p>
           </div>
-
-          {/* Size Selection */}
           {(resolvedParams.category === "abayas" || resolvedParams.category === "shoes") &&
             product.sizes &&
             product.sizes.length > 0 && (
@@ -195,7 +186,6 @@ export default function ProductPage({ params }) {
               </div>
             )}
 
-          {/* Quantity */}
           <div className="mb-6">
             <h3 className="font-medium text-gray-900 mb-3">Quantity</h3>
             <div className="flex items-center space-x-3">
@@ -215,7 +205,6 @@ export default function ProductPage({ params }) {
             </div>
           </div>
 
-          {/* Add to Cart */}
           <div className="flex space-x-4 mb-8">
             <AddToCartButton
               product={product}
@@ -230,7 +219,6 @@ export default function ProductPage({ params }) {
             </button>
           </div>
 
-          {/* Features */}
           <div className="grid grid-cols-3 gap-4 mb-8">
             <div className="text-center">
               <Truck className="w-6 h-6 text-rose-600 mx-auto mb-2" />
@@ -248,7 +236,6 @@ export default function ProductPage({ params }) {
         </div>
       </div>
 
-      {/* Product Tabs */}
       <div className="mt-16">
         <div className="border-b border-gray-200">
           <nav className="flex space-x-8">
