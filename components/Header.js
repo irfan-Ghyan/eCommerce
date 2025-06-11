@@ -28,7 +28,7 @@ export default function Header() {
             <span className="text-2xl font-bold text-black">Elegance</span>
           </Link>
 
-          <nav className="hidden md:flex space-x-8">
+          <nav className="hidden md:flex space-x-4">
             {categories.map((category) => (
               <Link
                 key={category.name}
