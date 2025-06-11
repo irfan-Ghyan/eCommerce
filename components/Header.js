@@ -25,7 +25,7 @@ export default function Header() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center">
-            <span className="text-2xl font-bold text-black">Elegance</span>
+            <span className="text-2xl font-bold text-black">BACHLAY</span>
           </Link>
 
           <nav className="hidden md:flex space-x-4">

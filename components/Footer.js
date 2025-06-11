@@ -5,10 +5,10 @@ export default function Footer() {
   return (
     <footer className="bg-black text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* Company Info */}
           <div>
-            <h3 className="text-2xl font-bold text-white mb-4">Elegance</h3>
+            <h3 className="text-2xl font-bold text-white mb-4">BACHLAY</h3>
             <p className="text-gray-300 mb-4 leading-relaxed">
               Your premier destination for elegant ladies' fashion, jewelry, cosmetics, and accessories.
             </p>
@@ -46,32 +46,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Customer Service */}
-          <div>
-            <h4 className="font-semibold mb-4 text-white">Customer Service</h4>
-            <ul className="space-y-2 text-gray-300">
-              <li>
-                <Link href="/about" className="hover:text-white transition-colors duration-200">
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="hover:text-white transition-colors duration-200">
-                  Contact
-                </Link>
-              </li>
-              <li>
-                <Link href="/shipping" className="hover:text-white transition-colors duration-200">
-                  Shipping Info
-                </Link>
-              </li>
-              <li>
-                <Link href="/returns" className="hover:text-white transition-colors duration-200">
-                  Returns
-                </Link>
-              </li>
-            </ul>
-          </div>
+      
 
           {/* Contact Info */}
           <div>
@@ -79,11 +54,11 @@ export default function Footer() {
             <div className="space-y-2 text-gray-300">
               <div className="flex items-center">
                 <Phone className="w-4 h-4 mr-2" />
-                <span>+971 (0) 123-4567</span>
+                <span>+971 (55) 936-8028</span>
               </div>
               <div className="flex items-center">
                 <Mail className="w-4 h-4 mr-2" />
-                <span>info@elegance.ae</span>
+                <span>info@bachlay.ae</span>
               </div>
               <div className="flex items-center">
                 <MapPin className="w-4 h-4 mr-2" />
@@ -94,7 +69,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; 2024 Elegance. All rights reserved.</p>
+          <p>&copy; 2025 BACHLAY. All rights reserved.</p>
         </div>
       </div>
     </footer>
