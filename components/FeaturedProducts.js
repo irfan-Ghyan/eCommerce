@@ -43,11 +43,11 @@ export default function FeaturedProducts() {
   ]
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Featured Products</h2>
-          <p className="text-xl text-gray-600">Handpicked favorites from our collection</p>
+          <h2 className="section-title">Featured Products</h2>
+          <p className="section-subtitle">Handpicked favorites from our collection</p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -75,16 +75,16 @@ export default function FeaturedProducts() {
                 </div>
                 <span className="text-sm text-gray-600 ml-2">({product.rating})</span>
               </div>
-              <h3 className="font-semibold text-gray-900 mb-2">{product.name}</h3>
-              <div className="flex items-center justify-between">
+              <h3 className="font-semibold text-black mb-2">{product.name}</h3>
+              <div className="flex items-center justify-between mb-3">
                 <div className="flex items-center space-x-2">
-                  <span className="text-lg font-bold text-rose-600">AED {product.price}</span>
+                  <span className="text-lg font-bold text-black">AED {product.price}</span>
                   <span className="text-sm text-gray-500 line-through">AED {product.originalPrice}</span>
                 </div>
               </div>
               <Link
                 href={`/product/${product.category}/${product.id}`}
-                className="mt-3 w-full btn-primary text-center block"
+                className="w-full btn-primary text-center block"
               >
                 View Details
               </Link>

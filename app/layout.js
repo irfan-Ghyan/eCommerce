@@ -4,7 +4,11 @@ import Header from "@/components/Header"
 import Footer from "@/components/Footer"
 import { CartProvider } from "@/contexts/CartContext"
 
-const inter = Inter({ subsets: ["latin"] })
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800"],
+  display: "swap",
+})
 
 export const metadata = {
   title: "Elegance - Ladies Fashion Store",

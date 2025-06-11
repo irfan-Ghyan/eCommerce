@@ -3,43 +3,43 @@ import { Facebook, Instagram, Twitter, Mail, Phone, MapPin } from "lucide-react"
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-black text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-2xl font-bold text-rose-400 mb-4">BACHLAY</h3>
-            <p className="text-gray-300 mb-4">
+            <h3 className="text-2xl font-bold text-white mb-4">Elegance</h3>
+            <p className="text-gray-300 mb-4 leading-relaxed">
               Your premier destination for elegant ladies' fashion, jewelry, cosmetics, and accessories.
             </p>
             <div className="flex space-x-4">
-              <Facebook className="w-5 h-5 text-gray-400 hover:text-rose-400 cursor-pointer" />
-              <Instagram className="w-5 h-5 text-gray-400 hover:text-rose-400 cursor-pointer" />
-              <Twitter className="w-5 h-5 text-gray-400 hover:text-rose-400 cursor-pointer" />
+              <Facebook className="w-5 h-5 text-gray-400 hover:text-white cursor-pointer transition-colors duration-200" />
+              <Instagram className="w-5 h-5 text-gray-400 hover:text-white cursor-pointer transition-colors duration-200" />
+              <Twitter className="w-5 h-5 text-gray-400 hover:text-white cursor-pointer transition-colors duration-200" />
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-semibold mb-4">Quick Links</h4>
+            <h4 className="font-semibold mb-4 text-white">Quick Links</h4>
             <ul className="space-y-2 text-gray-300">
               <li>
-                <Link href="/category/abayas" className="hover:text-rose-400">
+                <Link href="/category/abayas" className="hover:text-white transition-colors duration-200">
                   Abayas
                 </Link>
               </li>
               <li>
-                <Link href="/category/jewelry" className="hover:text-rose-400">
+                <Link href="/category/jewelry" className="hover:text-white transition-colors duration-200">
                   Jewelry
                 </Link>
               </li>
               <li>
-                <Link href="/category/cosmetics" className="hover:text-rose-400">
+                <Link href="/category/cosmetics" className="hover:text-white transition-colors duration-200">
                   Cosmetics
                 </Link>
               </li>
               <li>
-                <Link href="/category/perfumes" className="hover:text-rose-400">
+                <Link href="/category/perfumes" className="hover:text-white transition-colors duration-200">
                   Perfumes
                 </Link>
               </li>
@@ -47,47 +47,47 @@ export default function Footer() {
           </div>
 
           {/* Customer Service */}
-          {/* <div>
-            <h4 className="font-semibold mb-4">Customer Service</h4>
+          <div>
+            <h4 className="font-semibold mb-4 text-white">Customer Service</h4>
             <ul className="space-y-2 text-gray-300">
               <li>
-                <Link href="/about" className="hover:text-rose-400">
+                <Link href="/about" className="hover:text-white transition-colors duration-200">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="hover:text-rose-400">
+                <Link href="/contact" className="hover:text-white transition-colors duration-200">
                   Contact
                 </Link>
               </li>
               <li>
-                <Link href="/shipping" className="hover:text-rose-400">
+                <Link href="/shipping" className="hover:text-white transition-colors duration-200">
                   Shipping Info
                 </Link>
               </li>
               <li>
-                <Link href="/returns" className="hover:text-rose-400">
+                <Link href="/returns" className="hover:text-white transition-colors duration-200">
                   Returns
                 </Link>
               </li>
             </ul>
-          </div> */}
+          </div>
 
           {/* Contact Info */}
           <div>
-            <h4 className="font-semibold mb-4">Contact Info</h4>
+            <h4 className="font-semibold mb-4 text-white">Contact Info</h4>
             <div className="space-y-2 text-gray-300">
               <div className="flex items-center">
                 <Phone className="w-4 h-4 mr-2" />
-                <span>+971 (55) 9368028</span>
+                <span>+971 (0) 123-4567</span>
               </div>
               <div className="flex items-center">
                 <Mail className="w-4 h-4 mr-2" />
-                <span>info@bachlay.com</span>
+                <span>info@elegance.ae</span>
               </div>
               <div className="flex items-center">
                 <MapPin className="w-4 h-4 mr-2" />
-                <span>123 Fashion St, Walkcity, Dubai</span>
+                <span>Dubai, United Arab Emirates</span>
               </div>
             </div>
           </div>
