@@ -24,7 +24,7 @@ export default function CategoriesSection() {
     {
       name: "Perfumes",
       href: "/category/perfumes",
-      image: "/perfume-1",
+      image: "/perfume-1.png",
       description: "Captivating fragrances",
     },
     {
