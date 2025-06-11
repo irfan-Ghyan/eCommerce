@@ -52,12 +52,12 @@ export default function Header() {
 
           {/* Right Icons */}
           <div className="flex items-center space-x-4">
-            <button className="p-2 text-gray-700 hover:text-rose-600">
+            {/* <button className="p-2 text-gray-700 hover:text-rose-600">
               <User className="w-5 h-5" />
             </button>
             <button className="p-2 text-gray-700 hover:text-rose-600">
               <Heart className="w-5 h-5" />
-            </button>
+            </button> */}
             <Link href="/cart" className="p-2 text-gray-700 hover:text-rose-600 relative">
               <ShoppingBag className="w-5 h-5" />
               {cartCount > 0 && (
