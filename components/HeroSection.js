@@ -20,9 +20,6 @@ export default function HeroSection() {
               <Link href="/category/abayas" className="btn-primary inline-flex items-center justify-center">
                 Shop Now <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
-              <Link href="/about" className="btn-secondary inline-flex items-center justify-center">
-                Learn More
-              </Link>
             </div>
           </div>
           <div className="relative">
