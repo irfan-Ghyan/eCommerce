@@ -1,8 +1,11 @@
 "use client"
 import { useState } from "react"
 import { CreditCard, Lock, Truck } from "lucide-react"
+import { useCart } from "@/contexts/CartContext"
+import Link from "next/link"
 
 export default function CheckoutPage() {
+  const { items, getCartTotal } = useCart()
   const [paymentMethod, setPaymentMethod] = useState("card")
   const [formData, setFormData] = useState({
     email: "",
@@ -18,6 +21,20 @@ export default function CheckoutPage() {
     nameOnCard: "",
   })
 
+  if (items.length === 0) {
+    return (
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="text-center">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Your cart is empty</h2>
+          <p className="text-gray-600 mb-8">Add some items to your cart before checkout</p>
+          <Link href="/" className="btn-primary">
+            Continue Shopping
+          </Link>
+        </div>
+      </div>
+    )
+  }
+
   const handleInputChange = (e) => {
     setFormData({
       ...formData,
@@ -31,25 +48,10 @@ export default function CheckoutPage() {
     alert("Order placed successfully!")
   }
 
-  const orderItems = [
-    {
-      name: "Classic Black Abaya",
-      price: 129.99,
-      quantity: 1,
-      image: "/abaya-1.png",
-    },
-    {
-      name: "Gold Pearl Necklace",
-      price: 89.99,
-      quantity: 1,
-      image: "/abaya-2.png",
-    },
-  ]
-
-  const subtotal = 219.98
-  const shipping = 0
-  const tax = 17.6
-  const total = 237.58
+  const subtotal = getCartTotal()
+  const shipping = subtotal > 100 ? 0 : 15
+  const tax = subtotal * 0.08
+  const total = subtotal + shipping + tax
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -291,8 +293,8 @@ export default function CheckoutPage() {
             <h2 className="text-xl font-semibold text-gray-900 mb-4">Order Summary</h2>
 
             <div className="space-y-4 mb-6">
-              {orderItems.map((item, index) => (
-                <div key={index} className="flex items-center space-x-3">
+              {items.map((item) => (
+                <div key={item.cartId} className="flex items-center space-x-3">
                   <div className="w-16 h-20 flex-shrink-0">
                     <img
                       src={item.image || "/placeholder.svg"}
@@ -302,9 +304,13 @@ export default function CheckoutPage() {
                   </div>
                   <div className="flex-1">
                     <h3 className="font-medium text-gray-900">{item.name}</h3>
-                    <p className="text-sm text-gray-600">Qty: {item.quantity}</p>
+                    <div className="text-sm text-gray-600">
+                      {item.color && <p>Color: {item.color}</p>}
+                      {item.size && <p>Size: {item.size}</p>}
+                      <p>Qty: {item.quantity}</p>
+                    </div>
                   </div>
-                  <p className="font-medium">AED {item.price}</p>
+                  <p className="font-medium">AED {(item.price * item.quantity).toFixed(2)}</p>
                 </div>
               ))}
             </div>
