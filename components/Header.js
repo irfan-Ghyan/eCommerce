@@ -1,8 +1,9 @@
 "use client"
 import { useState } from "react"
 import Link from "next/link"
-import { Search, ShoppingBag, Menu, X, User, Heart } from "lucide-react"
+import { ShoppingBag, Menu, X, User, Heart } from "lucide-react"
 import { useCart } from "@/contexts/CartContext"
+import SearchBar from "./SearchBar"
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -23,9 +24,8 @@ export default function Header() {
     <header className="bg-white border-b border-gray-200 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
           <Link href="/" className="flex items-center">
-            <span className="text-2xl font-bold text-black">BACHLAY</span>
+            <span className="text-2xl font-bold text-black">Elegance</span>
           </Link>
 
           <nav className="hidden md:flex space-x-4">
@@ -40,21 +40,17 @@ export default function Header() {
             ))}
           </nav>
 
-
           <div className="hidden md:flex items-center flex-1 max-w-md mx-8">
-            <div className="relative w-full">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
-              <input
-                type="text"
-                placeholder="Search products..."
-                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent transition-all duration-200"
-              />
-            </div>
+            <SearchBar className="w-full" />
           </div>
 
-
-          <div className="flex items-center space-x-4">
-
+          <div className="flex items-center ">
+            <button className="p-2 text-gray-700 hover:text-black transition-colors duration-200">
+              <User className="w-5 h-5" />
+            </button>
+            <button className="p-2 text-gray-700 hover:text-black transition-colors duration-200">
+              <Heart className="w-5 h-5" />
+            </button>
             <Link href="/cart" className="p-2 text-gray-700 hover:text-black relative transition-colors duration-200">
               <ShoppingBag className="w-5 h-5" />
               {cartCount > 0 && (
@@ -64,23 +60,18 @@ export default function Header() {
               )}
             </Link>
 
+            {/* Mobile Menu Button */}
             <button className="md:hidden p-2" onClick={() => setIsMenuOpen(!isMenuOpen)}>
               {isMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </button>
           </div>
         </div>
 
+        {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-gray-200">
             <div className="mb-4">
-              <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
-                <input
-                  type="text"
-                  placeholder="Search products..."
-                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent"
-                />
-              </div>
+              <SearchBar className="w-full" />
             </div>
             <nav className="space-y-2">
               {categories.map((category) => (
